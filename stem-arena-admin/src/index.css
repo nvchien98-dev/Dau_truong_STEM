@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --admin-red: #ff3366;
+  --admin-orange: #ff9900;
+  --dark-bg: #0a0505;
+  --panel-bg: rgba(25, 10, 10, 0.8);
+  --panel-border: rgba(255, 51, 102, 0.4);
+  --text-main: #ffe0e0;
+  --text-muted: #aa8888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-main);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(255, 51, 102, 0.15) 0%, transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+}
+
+.admin-panel {
+  background: var(--panel-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 51, 102, 0.2);
+}
+
+.admin-button {
+  background: transparent;
+  color: var(--admin-red);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border: 1px solid var(--admin-red);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 0 10px rgba(255, 51, 102, 0.2);
+}
+
+.admin-button:hover {
+  background: var(--admin-red);
+  color: #fff;
+  box-shadow: 0 0 20px var(--admin-red);
+}
+
+.admin-input {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--panel-border);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 4px;
+  outline: none;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.admin-input:focus {
+  border-color: var(--admin-red);
+  box-shadow: 0 0 15px rgba(255, 51, 102, 0.4);
+}
+
+.glow-text {
+  color: var(--admin-red);
+  text-shadow: 0 0 10px var(--admin-red), 0 0 20px var(--admin-red);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,0.5); }
+::-webkit-scrollbar-thumb { background: var(--admin-red); border-radius: 4px; }
